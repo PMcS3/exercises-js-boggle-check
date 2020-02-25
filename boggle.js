@@ -1,3 +1,4 @@
+
 function newBoggleBoard() {
 
   let boggleBoard = [];
@@ -43,8 +44,64 @@ function shake(boggleBoard) {
   return boggleBoard;
 }
 
-let board = newBoggleBoard();
+let board;
 
-shake(board);
+function getBoard() {
+  board = newBoggleBoard();
+  printBoggleBoard(board);
+}
+
+$('.board').on('click', function() {
+  shake(board);
+  printBoggleBoard(board);
+});
+
+
+
+//let board = newBoggleBoard();
+
+//shake(board);
+/*
+function inverseBoard (board)
+{
+  for (let row of board)
+  {
+    row = row.reverse();
+  }
+  return board;
+}
+
+let inverseRows = inverseBoard(board);
+
+let reverseBoard = inverseRows.reverse();
+
+function boggleBoardContainsWord(board, word) {
+  let checkZontal = "";
+  let checkVert = "";
+
+  for (let row of boggleBoard)
+   {
+    for (i=0;i<4;i++)
+    {
+      checkZontal = checkZontal + boggleBoard[i];
+      //let index = dice[(randomInteger(0, dice.length - 1))];
+      //row[i] = index[Math.floor(Math.random() * (6))];
+    }
+    if (checkZontal === word)
+    {
+      return true;
+    }
+   }
+  if (checkVert === word)
+  {
+    return true;
+  }
+  else
+  {
+    return false;
+  }
+
+}
 
 printBoggleBoard(board);
+*/
