@@ -51,6 +51,8 @@ Can you think of a way to model a die landing in only one cell without explicitl
 Here's a list of Boggle dice, with `Q` representing `Qu`:
 
 ```text
+
+
 AAEEGN
 ELRTTY
 AOOTTW
